@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Phone</title>
+    </head>
+    <body ng-app='app'>
+        <div ng-controller='phoneCtrl'>
+            <phone number="0406760121" network="network" make-call='call(number,message)'></phone>
+            <phone number="0456234231" network="network" make-call='call(number,message)'></phone>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='directivePhone2.js'></script>
+    </body>
+</html>

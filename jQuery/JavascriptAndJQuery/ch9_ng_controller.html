@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app lang="en">
+    <head>
+        <title>JavaScript &amp; JQuery - Chapter 9...</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+        <script src="js/ch9_ng_controller.js"></script>
+        <link rel="stylesheet" href="css/c09.css" />
+    </head>
+    <body>
+        <table ng-controller="BasketCtrl">
+            <tr><td>Item:</td><td>{{description}}</td></tr>
+            <tr><td>Cost:</td><td>{{cost}}</td></tr>
+            <tr><td>Qty:</td><td><input type="number" ng-model="qty"></td></tr>
+            <tr><td>Subtotal:</td><td>{{qty*cost|currency}}</td></tr>
+        </table>
+    </body>
+</html>

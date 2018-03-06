@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Service</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='service.js'></script>
+    </head>
+    <body ng-app="service">
+        <div id='simple' ng-controller='MyController'>
+            <p>Let's try this simple notify servie, injected into the controller...</p>
+            <input ng-init="message='test'" ng-model='message'>
+            <button ng-click='callNotify(message);'>NOTIFY</button>
+            <p>(you have to click 3 times to see an alert)</p>
+        </div>
+    </body>
+</html>

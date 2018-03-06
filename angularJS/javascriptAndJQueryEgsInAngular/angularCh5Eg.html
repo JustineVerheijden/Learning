@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/c05.css" />
+        <title>DOM</title>
+    </head>
+    <body ng-app='app' ng-controller='List as list'>
+        <h1 id="header">List King</h1>
+        <h2>Buy Groceries {{list.num}} </h2>
+        <ul parent-of-li>
+            <li set-class id="one" class="hot"><em>fresh</em>figs</li>
+            <li set-class id="two" class="hot">pine nuts</li>
+            <li set-class id="three" class="hot">honey</li>
+            <li set-class id="four">balsamic vinegar</li>
+            <li set-class id="five" class="hot"><em>fresh</em>figs</li>
+            <li set-class id="six" class="hot">pine nuts</li>
+            <li set-class id="seven" class="hot">honey</li>
+            <li set-class id="eight">balsamic vinegar</li>
+        </ul>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src="angularCh5Eg.js"></script>
+    </body>
+</html>
+

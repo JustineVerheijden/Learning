@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spicy</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='spicy.js'></script>
+    </head>
+    <body ng-app='spicy'>
+        <div ng-controller="SpicyController">
+            <button ng-click='chiliSpicy()'>Chili</button>
+            <button ng-click="jalapenoSpicy()">Jalapeno</button>
+            <p>The food is {{spice}} spicy!</p>
+        </div>
+    </body>
+</html>

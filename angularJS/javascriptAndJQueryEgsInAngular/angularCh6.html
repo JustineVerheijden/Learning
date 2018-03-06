@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset ="utf-8">
+        <link rel="stylesheet" href="css/c06.css" />
+        <title>Event Listeners</title>
+    </head>
+    <body ng-app='app' ng-controller="Record as record">
+        <h1>Event Listeners</h1>
+        <h2>{{ (record.username?record.username:"Audio Note")}}</h2>   
+        <div>
+            <label for"username">Enter note name:</label>
+            <input type="text" id="username" ng-model="record.username">
+            <div id='buttons'>
+                <a href='' ng-class='record.whichBtn' ng-click='record.changeButton()'></a>
+            </div>
+        </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src="angularCh6.js"></script>
+    </body>
+</html>

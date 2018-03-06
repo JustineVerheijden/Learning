@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Directive Components</title>
+    </head>
+    <body>
+        <div ng-app='app'>
+            <clock timezone='AEST'></clock>
+            <panel title="I'm a title">
+                <clock timezone='PST'></clock>
+            </panel>
+            <panel title="I'm a title">
+                <clock timezone='PST'></clock>
+                <clock timezone='PST'></clock>
+                <clock timezone='PST'></clock>
+                <clock timezone='PST'></clock>
+            </panel>
+        </div>
+    </body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+    <script src='directiveComponents.js'></script>
+</html>
