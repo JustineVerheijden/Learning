@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animations</title>
+        <style type='text/css'>
+        .box-one{
+            margin:10px 0 20px 0;
+            padding:10px;
+            border:1px solid rgba(0,0,0,0.2);
+            background:#f00;
+            color:#fff;
+            border-radius:4px;
+            
+            -webkit-transition:all linear 0.5s;
+            transition: all linear 0.5s;
+        }
+        .box-one.ng-hide {
+            opacity:0;
+        }
+        </style>
+    </head>
+    <body ng-app="app" ng-controller="testCtrl as test">
+        <div>
+            <button ng-click='test.showBoxOne = !test.showBoxOne'>Toggle Box One</button>
+            <div class='box-one' ng-show='test.showBoxOne'>Hello! I am Box one</div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js'></script>
+        <script src='animation.js'></script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+        <script src="js/ch9_ng_external_data.js"></script>
+        <link rel="stylesheet" href="css/c09.css" />
+    </head>
+    <body>
+        <table ng-controller="TimetableCtrl">
+            <tr><th>time</th><th>title</th><th>detail</th></tr>
+            <tr ng-repeat="session in sessions">
+                <td>{{session.time}}</td>
+                <td>{{session.title}}</td>
+                <td>{{session.detail}}</td>
+            </tr>
+        </table>
+    </body>
+</html>
+

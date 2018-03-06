@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Play</title>
+        <style>
+            .box{
+                -webkit-transition:all linear 0.5s;
+                transition:all linear 0.5s;   
+            }
+            .box.bigger {
+                font-size : 30px;
+            }
+            .box.color {
+                background-color: red;
+            }
+        
+        </style>
+    </head> 
+    <body ng-app='app' ng-controller='TestCtrl as test'>
+        <button ng-click='test.large=!test.large'>press me</button>
+        <button ng-click ='test.red=!test.red'>press me2</button>
+        
+        <div class='box' ng-class='{"bigger":test.large, "color":test.red}'>Stuff in here</div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js'></script>
+        <script src='animators.js'></script>
+    </body>
+</html>

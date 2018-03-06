@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $('#author-jp').click(function(evt){
+        evt.preventDefault();
+        $('#details-jp').empty().load('pr09-01-jp.html');
+    });
+    $('#author-kd').click(function(evt){
+        evt.preventDefault();
+        $('#details-kd').empty().load('pr09-01-kd.html');
+    });
+});

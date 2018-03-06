@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Scope Inheritance</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='inheritance.js'></script>
+    </head>
+    <body ng-app='inheritance'>
+        <div class='spicy'>
+            <div ng-controller="MainController">
+                <p>Good {{timeOfDay}}, {{name}}!</p>
+                <div ng-controller="ChildController">
+                    <p>Good {{timeOfDay}}, {{name}}!</p>    
+                    <div ng-controller='GrandChildController'>
+                        <p>Good {{timeOfDay}}, {{name}}!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Robot</title>
+    </head>
+    <body ng-app='app'>
+        <robot>
+            <button ng-click='up()'>Up</button>
+            <button ng-click='down()'>Down</button>
+            <button ng-click='left()'>Left</button>
+            <button ng-click='right()'>Right</button>
+            <div >
+                <input type='text' ng-model='testtext'>
+                <img ng-model='imgDiv' src='beef.jpg' style='width:40px;height:50px;'>
+            </div>
+        </robot>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='angularRobot.js'></script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 4</title>
+        <link rel="stylesheet" href="css/c04.css" />
+    </head>
+    <body ng-app='app'>
+        <section id="page1" ng-controller='Calc as calc'>
+            <h1>Bullseye</h1>
+            <img src="images/teacher.png" id="teacher" alt="teacher" />
+            <section id="blackboard"><div ng-repeat='arith in calc.calculation'>{{arith}}</div></section> 
+            <section id="answer"></section>
+        </section>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src="angularCh4Eg.js"></script>
+    </body>
+</html>
+

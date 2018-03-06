@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/c07.css" />
+        <title>Chapter7 example</title>
+    </head>
+    <body ng-app='app' ng-controller='Shop as shop'>
+        <h1></h1>
+        <h2 id="h2Heading">Buy Groceries {{shop.num}}</h2>
+
+        <u1 id="list" click-complete-delete>
+            <li id="one">fresh figs{{shop.num}}</li>
+            <li id="two">pine nuts</li>
+            <li id="three">honey</li>
+            <li id="four">balsamic vinegar</li>
+        </u1>
+        <div id="newItemButton">
+            
+            <button href="#" id="showForm" ng-if='shop.newItem' ng-click='shop.newItem=!shop.newItem'>new item</button>
+        </div>
+        <form id="newItemForm" ng-if='!shop.newItem'>
+            <input type="text" id="newItem" />
+            <input submit-button type="submit" id="addButton" ng-click="shop.submitted()"/>
+        </form>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='angularCh7.js'></script>
+    </body>
+</html>
