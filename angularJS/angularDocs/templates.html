@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>templates</title>
+        <meta charset="utf-8">
+    </head>
+    <body ng-app='app'>
+        <div ng-view></div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js'></script>
+        <script src='templates.js'></script>
+        <script type="text/ng-template" id="test.html">
+            Hello {{ test.user.name }}!
+          </script>
+    </body>
+</html>
