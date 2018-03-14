@@ -1,0 +1,16 @@
+<h2>Roll up! Roll up! It's the maker bus...</h2>
+<div class="third">
+    <div id="event">
+        <a id="ca" ng-click='times.eventClicked("CA")'><img src="img/map-ca.png" alt="San Francisco" />San Francisco, CA</a>
+        <a id="tx" ng-click='times.eventClicked("TX")'><img src="img/map-tx.png" alt="Austin, TX" />Austin, TX</a>
+        <a id="ny" ng-click='times.eventClicked("NY")'><img src="img/map-ny.png" alt="New York, NY" />New York, NY</a>
+    </div>
+</div>
+<div class="third" >
+    <div ng-repeat='x in times.stateTimes'> <li><span class="time">{{x.time}}</span>
+        <a ng-click='times.timeClicked(x.title)'>{{x.title}}</a></li>
+    </div>
+</div>
+<div class="third">
+    <div id="details"></div>
+</div>
