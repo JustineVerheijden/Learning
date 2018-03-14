@@ -1,4 +1,4 @@
-function solution(number){
+/*function solution(number){
     var value = 0;
     var romanStr = "";
     var  roman = [{M:1000},{CM:900}, {D:500},{CD:400},{C:100},{XC:90},{L:50},{XL:40},{X:10},{IX:9},{V:5},{IV:4},{I:1} ];
@@ -20,7 +20,7 @@ function solution(number){
    
    
    
-console.log(solution(1), '1 should == "I"')
+console.log(solution(1), '1 should == "I"')*/
 /*console.log(solution(4), '4 should == "IV"')
 console.log(solution(1000), '1000 should == "M"')
 console.log(solution(1990), '1990 should == "MCMXC"')
@@ -381,3 +381,90 @@ function addBinary(a,b) {
 function multiply(a, b){
   return (a * b)
 }*/
+
+/*
+
+function solution(number){
+    var romanObject = { "M": '1000', "CM":"900", "D": "500", "CD":"400", "C":"100","XC":"90", "L":"50", "XL":"40", "X":"10", "IX":"9", "V":"5", "IV": "4", "I":'1'};
+    romanNumber = '';
+
+    for (var key in romanObject) {
+        if (romanObject.hasOwnProperty(key)) {
+            while (number >= romanObject[key]){
+                number = number -romanObject[key];
+                romanNumber+=key;
+            }
+        }
+    }
+    
+    return romanNumber;
+  }
+
+  console.log(solution(1), '1 should == "I"')
+console.log(solution(4), '4 should == "IV"')
+console.log(solution(1444), '1444 should == "MCDXLIV"')
+console.log(solution(1990), '1990 should == "MCMXC"')
+console.log(solution(2007), '2007 should == "MMVII"')
+console.log(solution(1666), '1666 should == "MDCLXVI"')
+
+*/
+/*function randomCase(sentence){
+    var newSentence='';
+    var randomUpper;
+    for (var i=0;i<sentence.length;i++){
+        if (Math.random()>0.5 && sentence[i].match(/[a-z]/g)){
+            randomUpper = String.fromCharCode(sentence[i].charCodeAt(0)-32);
+        }
+        newSentence+=randomUpper?randomUpper:sentence[i];
+        randomUpper=void(null);
+    }
+    return newSentence;
+}
+
+
+console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit"));
+
+console.log(randomCase("Donec eleifend cursus lobortis") );
+*/
+
+function mixedFraction(s){
+    var splitNumbers = s.split('/');
+    var negativeNumber;
+    if (Number(splitNumbers[1])===0){
+        throw "ZeroDivisionError";
+    }
+    
+    if ( (splitNumbers[0]<0 && splitNumbers[1]>0) || (splitNumbers[1]<0 && splitNumbers[0]>0)){
+        negativeNumber = true;
+    }
+    var absSplitNumbers = [Math.abs(splitNumbers[0]),Math.abs(splitNumbers[1])];
+    var wholeNumber =  Math.floor(absSplitNumbers[0]/absSplitNumbers[1]);
+    var fractionPart;
+    if (wholeNumber !== absSplitNumbers[0]/absSplitNumbers[1]) {
+        var topNumber = absSplitNumbers[0]-wholeNumber*absSplitNumbers[1];
+        for (var i=0; i<topNumber;i++)
+        {
+            if ((topNumber%(i+1)===0) && (absSplitNumbers[1]%(i+1)===0)){
+                fractionPart = topNumber/(i+1)+'/'+absSplitNumbers[1]/(i+1);
+            }
+        }
+        if (!fractionPart){
+        fractionPart = topNumber+'/'+absSplitNumbers[1];
+        }
+        wholeNumber = (wholeNumber===0?"":wholeNumber+' ')+fractionPart;
+    }
+
+    return (negativeNumber?'-':"")+wholeNumber.toString();
+}
+
+console.log(mixedFraction('42/9'), '4 2/3');
+console.log(mixedFraction('6/3'), '2');
+console.log(mixedFraction('1/1'), '1');
+console.log(mixedFraction('11/11'), '1');
+console.log(mixedFraction('4/6'), '2/3');
+console.log(mixedFraction('0/18891'), '0');
+console.log(mixedFraction('-10/7'), '-1 3/7');
+console.log(mixedFraction('-22/-7'), '3 1/7');
+console.log(mixedFraction('0/0'), "Must raise ZeroDivisionError");
+console.log(mixedFraction('3/0'), "Must raise ZeroDivisionError");
+console.log(mixedFraction('-6/1'), '-6');
