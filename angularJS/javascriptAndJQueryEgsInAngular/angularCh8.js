@@ -45,6 +45,8 @@
 
         vm.timeClicked= function (titleClicked){
             console.log(titleClicked);
+            vm.titleClicked = titleClicked;
+            console.log(vm.titleClicked);
         }
 
 
@@ -63,6 +65,17 @@
             return $http.get('angularCh8.json');
         }
     }
+
+    app.directive('details',function(){
+        return {
+            transclude :true,
+            scope:{},
+            require: '^Timetable',
+            //template: '{{times.titleClicked}}',
+            templateUrl: 'descriptions.html#Intro-to-3D-Modeling'
+
+        }
+    });
 
     
 })();

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <tite>Filters</tite>
+    </head>
+    <body ng-app='app'>
+        <div ng-controller='Times as times'>
+            <ul>
+            <li ng-repeat="x in times.values">{{x.time|twentyFourHourTime}} {{x.title|randomUppercase}}
+            </li>
+        </ul>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+        <script src="filters.js"></script>
+
+    </body>
+</html>
