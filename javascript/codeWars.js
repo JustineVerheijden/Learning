@@ -426,7 +426,7 @@ console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 
 console.log(randomCase("Donec eleifend cursus lobortis") );
 */
-
+/*
 function mixedFraction(s){
     var splitNumbers = s.split('/');
     var negativeNumber;
@@ -468,3 +468,25 @@ console.log(mixedFraction('-22/-7'), '3 1/7');
 console.log(mixedFraction('0/0'), "Must raise ZeroDivisionError");
 console.log(mixedFraction('3/0'), "Must raise ZeroDivisionError");
 console.log(mixedFraction('-6/1'), '-6');
+*/
+var numberToPrice = function(number) {
+  var priceString='';
+  var splitNumber = parseFloat(Math.floor(number * 100) / 100).toFixed(2).split('.');
+  if (isNaN(splitNumber[0])){
+    return 'NaN';
+  }
+  var separatedNumber= splitNumber[0];
+  while (separatedNumber.length>3){
+      priceString = ','+separatedNumber.substring(separatedNumber.length-3,separatedNumber.length)+priceString;
+      separatedNumber = separatedNumber.substring(0,separatedNumber.length-3);
+  }
+  if (separatedNumber.length!==0){
+    priceString = separatedNumber+priceString;      
+  }
+  return((priceString.length>1?priceString:'0')+'.'+splitNumber[1]);
+}
+
+console.log(numberToPrice(1500.129),   '1,500.12');
+console.log(numberToPrice(-5),         '-5.00');
+console.log(numberToPrice(1000000.5),  '1,000,000.50');
+console.log(numberToPrice('@'),        'NaN');

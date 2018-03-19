@@ -7,10 +7,12 @@
     </div>
 </div>
 <div class="third" >
-    <div ng-repeat='x in times.stateTimes'> <li><span class="time">{{x.time}}</span>
+    <div id='sessions' ng-repeat='x in times.stateTimes'> <li><span class="time">{{x.time}}</span>
         <a ng-click='times.timeClicked(x.title)'>{{x.title}}</a></li>
     </div>
 </div>
 <div class="third">
-    <div id="details"></div>
+    <div id="details">
+        <details></details>
+    </div>
 </div>
