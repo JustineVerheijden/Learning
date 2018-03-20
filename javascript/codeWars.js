@@ -472,6 +472,7 @@ console.log(mixedFraction('-6/1'), '-6');
 var numberToPrice = function(number) {
   var priceString='';
   var splitNumber = parseFloat(Math.floor(number * 100) / 100).toFixed(2).split('.');
+  var sign = number<0?'-':'';
   if (isNaN(splitNumber[0])){
     return 'NaN';
   }
