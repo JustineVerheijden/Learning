@@ -1,0 +1,24 @@
+#background {
+    background-color: pink;
+}
+
+#quoteBox {
+    background-color: white;
+}
+
+.buttons{
+    background-color:pink;
+    color:white;
+}
+#newQuote{
+    float: right;
+    
+}
+.quotes {
+    color:pink;
+    font-size:15px;
+} 
+
+.quote-text{
+    font-size:20px;
+}
