@@ -1,0 +1,10 @@
+.background{
+    padding-top: 50px;
+    background-color: black;
+    color: white;
+    font-size: 70px;
+}
+
+.location, .temp, .weather{
+    font-size: 40px;
+  }

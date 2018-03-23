@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Quote Machine</title>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='randomQuoteMachine.css'>
+    </head>
+    <body id='background'>
+        <br>
+        <br>
+        <div class='row'>
+            <div id='quoteBox' class='col-md-4 col-md-offset-4'>
+                <br>
+                <div class='text-center quotes quote-text'><i class="fa fa-quote-left"></i><span id='quote'></span></div>
+                <div class='text-right quotes' id='person'>person</div>
+                <div id='buttons'>
+                    <div class='btn buttons' id='twitter'><i id='twitterIcon' class="fa fa-twitter"></i> </div>
+                    <div class='btn buttons' id='tumblr'><i id='tumblrIcon' class="fa fa-tumblr"></i></div>
+                    <div class='btn buttons btn-right' id='newQuote'>New Quote</div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-12'>
+                <p class='text-center'>by Justine Verheijden</p>
+            </div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
+        <script src='randomQuoteMachine.js'></script>
+    </body>
+</html>
